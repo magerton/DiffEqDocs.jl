@@ -143,7 +143,7 @@ Then in a callback you can make the `affect!` function modify `integrator.prob.p
 For example, we can make it change when `u[2]<0.5` via:
 
 ```julia
-condition(t,u,integrator) = u[2] - 0.5
+condition(u,t,integrator) = u[2] - 0.5
 affect!(integrator) = integrator.prob.p = 1
 ```
 
